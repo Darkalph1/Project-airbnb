@@ -15,6 +15,8 @@ body{
 /* basic */
 .btn{
     cursor: pointer;
+    background: none;
+    border: none;
 }
 .underscore{
     opacity: 0;
@@ -41,6 +43,7 @@ body{
     top: 0;
     left: 0;
     background-color: #fff;
+    z-index: 9999;
 }
 .search-bar{
     display:block;
@@ -80,7 +83,8 @@ button.search-button, button.filter-icon-wrapper{
     justify-content: space-around;
     opacity: 0.6;
 }
-.dot{
+.dot::before{
+    content:".";
     padding: 0 2px;
 }
 
@@ -89,6 +93,7 @@ button.search-button, button.filter-icon-wrapper{
 }
 .search-icon{
     margin: 10px 0;
+    padding-left: 10px;
 }
 .search-icon img{
     display: block;
@@ -124,8 +129,7 @@ button.search-button, button.filter-icon-wrapper{
     display: none;
 }
 .search-2-wrapper .btn{
-    background: none;
-    border: none;
+   
     display: flex;
     flex-wrap: wrap; 
     justify-content: flex-start;
@@ -146,29 +150,48 @@ button.search-button, button.filter-icon-wrapper{
 
 /* content continer */
 
-.content-continer{
-    margin: 0px 10px 10px 10px;
-    padding: 10px 10px;
+.content-wrapper{
+    /* display: flex;
+    flex-wrap: wrap; */
+    margin: 10px;
+    width: 95%;
+    padding: 0px 5%;
+    box-sizing: border-box;
+    gap: 30px;
 }
 .card-container{
-    grid-column: span 1;
-    grid-auto-rows: minmax(auto, 100px);
-    padding: 10px 10px;
+    grid-column: span 12;  
+    
+}
+.img-container-wrapper-1{
+    overflow: hidden; 
+    border-radius: 20px; 
+    height: 50%;
+}
+.img-container-wrapper{
+    position: relative;
+    display: flex;
+    width: 500%;
+    height: 100%;
+    
 }
 .img-container{
-    display: flex;
-    overflow-x: scroll;
-    min-width: 344px;
-    min-height: 300px;
-    border-radius: 20px;
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
 }
 .card-container .img-container img{
-    object-fit: cover;
+   
     box-sizing: border-box;
     width: 100%;
-    
-    
+    height: 100%;
+    border-radius: 20px;
 }
+
+
+
+
+
 .description-container{
     margin-top: 10px;
     row-gap: 10px;
@@ -176,23 +199,117 @@ button.search-button, button.filter-icon-wrapper{
 }
 .description-container .title{
     grid-column: span 6;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .description-container .rating{
     grid-column: 7/13;
     grid-row: 1/2;
     display: flex;
     justify-content: flex-end;
+    font-size: 1.2em;
     /* padding-right: 10px; */
+}
+.description-container .distance{
+    grid-column: 1/6;
+    grid-row: 2/3;
+    font-size: 1.2em;
+    opacity: 0.7;
 }
 .description-container .date{
     grid-column: 1/6;
-    grid-row: 2/3;
-    font-size: 1.1em;
+    grid-row: 3/4;
+    font-size: 1.2em;
     opacity: 0.7;
 }
 .description-container .cash{
     grid-column: 1/6;
-    grid-row: 3/4;
+    grid-row: 4/5;
+    font-size: 1.2em;
+}
+
+/* footer */
+footer{
+    border-top: 1px solid #f58888;
+    background-color: #f7f5f5;
+    font-size: 1.3em;
+    
+}
+.footer-wrapper{
+    padding: 0px 30px;
+}
+.footer-wrapper-1{
+    padding:30px 0;
+}
+.footer-wrapper-1 h3{
+    margin: 0;
+}
+.footer-wrapper-1 ul li a{
+    text-decoration: none;
+    color: #1f1e1f;
+}
+.footer-wrapper-1 ul li a:hover{
+    text-decoration: underline black;
+}
+.footer-wrapper-1 section{
+    border-bottom: 1px solid #c2b8b8;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+.support-items, .community-items, .hosting-items, .airbnb-items {
+    margin-top:10px;
+}
+/* bottom footer */
+section.bottom-footer, button.choose-currency, .bottom-footer button.first-line-wrapper-1{
+    display: flex;
+}
+
+button.first-line-wrapper-1{
+    margin-right: 24px;
+}
+
+
+button.first-line-wrapper-1 .img-language, button.choose-currency .currncy-icon{
+    margin-right: 10px;
+}
+
+button.first-line-wrapper-1 .img-language img{
+    height: 1.7em;
+}
+
+button.first-line-wrapper-1 .language, button.choose-currency{
+    align-self: center;
+    font-weight: 600;
+}
+button.choose-currency{
+    margin-top: 6px;
+}
+
+section.bottom-footer{
+    border-bottom: none;
+    margin: 0;
+}
+
+.copyright{
     font-size: 1.1em;
+}
+.terms-conditions a{
+    text-decoration: none;
+    color: #1f1e1f;
+}
+.terms-conditions a:hover{
+    text-decoration: underline;
+}
+
+/* -------- media quries --------------*/
+
+@media screen and (min-width: 550px) {
+
+    .content-wrapper .card-container{
+        grid-column: span 6;      
+    }
+
+}
+
+@media screen and (min-width: 745px){
+    
 }
