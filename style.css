@@ -48,7 +48,7 @@ body{
 .search-bar{
     display:block;
     padding: 14px 24px 0 24px;
-    border-bottom: 1px solid #b6b3b3;
+    border-bottom: 1px solid #dfdfdf;
 }
 button.search-button, button.filter-icon-wrapper{
     background: none;
@@ -61,7 +61,12 @@ button.search-button, button.filter-icon-wrapper{
     border: 1px solid #c4c4c4;
     border-radius: 50px;
     /* width: 400px; */
+}
 
+.search-bar-part-1-745px{
+    display: none;
+    margin:0;
+    padding: 0;
 }
 
 .search-button{
@@ -76,6 +81,9 @@ button.search-button, button.filter-icon-wrapper{
 .where-to{
     display: flex;
     justify-content: flex-start;
+}
+.where-to span{
+    font-weight: 600;
 }
 .three-option{
     display: flex;
@@ -108,6 +116,10 @@ button.search-button, button.filter-icon-wrapper{
     box-sizing: border-box;
     border: 2px solid #635e5e;
     border-radius: 50px;
+}
+.search-button-745px{
+    display:none;
+    padding: 0;
 }
 
 
@@ -151,28 +163,38 @@ button.search-button, button.filter-icon-wrapper{
 /* content continer */
 
 .content-wrapper{
-    /* display: flex;
-    flex-wrap: wrap; */
-    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin: 30px 0;
     width: 95%;
-    padding: 0px 5%;
+    padding-left: 10%;
+    padding-right: 5%;
     box-sizing: border-box;
     gap: 30px;
 }
 .card-container{
-    grid-column: span 12;  
+    grid-column: span 6;  
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    cursor: pointer;
+    /* min-width: fit-content; */
+    box-sizing: border-box;
     
 }
 .img-container-wrapper-1{
     overflow: hidden; 
     border-radius: 20px; 
     height: 50%;
+    aspect-ratio: 2/1.9;
 }
 .img-container-wrapper{
     position: relative;
     display: flex;
     width: 500%;
     height: 100%;
+    /* aspect-ratio: 2/1.9; */
     
 }
 .img-container{
@@ -181,50 +203,54 @@ button.search-button, button.filter-icon-wrapper{
    border-radius: 20px;
 }
 .card-container .img-container img{
-   
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
+
+
 
 
 
 
 
 .description-container{
+    display: grid;
+    grid-template-columns: 2fr, 1fr;
     margin-top: 10px;
     row-gap: 10px;
 
 }
 .description-container .title{
-    grid-column: span 6;
-    font-size: 1.2em;
+    grid-column: span 1;
+    font-size: 1.4em;
+    font-weight: 600;
 }
 .description-container .rating{
-    grid-column: 7/13;
+    grid-column: 2/3;
     grid-row: 1/2;
     display: flex;
     justify-content: flex-end;
-    font-size: 1.2em;
+    font-size: 1.4em;
     /* padding-right: 10px; */
 }
 .description-container .distance{
-    grid-column: 1/6;
+    grid-column: span 1;
     grid-row: 2/3;
-    font-size: 1.2em;
+    font-size: 1.4em;
     opacity: 0.7;
 }
 .description-container .date{
-    grid-column: 1/6;
+    grid-column: span 1;
     grid-row: 3/4;
-    font-size: 1.2em;
+    font-size: 1.4em;
     opacity: 0.7;
 }
 .description-container .cash{
-    grid-column: 1/6;
+    grid-column: span 1;
     grid-row: 4/5;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-weight: 600;
 }
 
 /* footer */
@@ -305,11 +331,139 @@ section.bottom-footer{
 @media screen and (min-width: 550px) {
 
     .content-wrapper .card-container{
-        grid-column: span 6;      
+        grid-column: span 3;      
     }
 
 }
 
 @media screen and (min-width: 745px){
+
     
+    /* search bar */
+    .search-bar-part-1{
+        display: none;
+        margin:0;
+        padding: 0;
+    }
+    .search-bar-part-1-745px{
+        display: flex;
+        width: 100%;
+        padding: 10px 40px;
+        /* height: 40px; */
+        box-sizing: border-box;
+        border-bottom: 1px solid #dfdfdf;
+        
+
+    }
+    .airbnblogo{
+        /* flex-grow: 1; */
+        width: fit-content;
+        height: 40px;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+    .airbnblogo .airbnb-logo-container{
+        width: fit-content;
+    }
+    .airbnblogo .airbnb-logo-container img{
+        width: 100%;
+        height: 120%;
+
+    }
+    
+    .search-bar-745px-wrapper .three-option-745px{
+        display:flex;
+        padding: 0 5px;
+        font-size: 1.4em;
+        border: 1px solid #c4c4c4;
+        border-radius: 50px;
+        cursor: pointer;
+        
+    }
+    .search-img-container, .first-option-745px, .second-option-745px, .third-option-745px, .line-745px{
+        /* flex: 1 0 auto; */
+        padding: 5px;
+        align-self: center;
+    }
+    .first-option-745px, .second-option-745px{
+        font-weight:600;
+    }
+    .three-option-745px .search-img-container{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .three-option-745px .search-img-container img{
+        height: 40;
+        width: 40;
+
+    }
+    .line-745px::before{
+        content:"|";
+        padding: 0 2px;
+    }
+
+    /* third part of the top bar in 745px*/
+
+
+    .third-part-of-745px{
+        display: flex;
+        flex-grow: 2;
+        align-self: center;
+        justify-content: flex-end;
+    }
+   
+    .third-part-of-745px .become-host-part{
+        display: flex;
+        align-self: center;
+        padding-right: 20px;
+    }
+    .become-host-wrapper span{
+        padding: 10px;
+        font-size: 1.2em;
+        font-weight: 600;
+        border-radius: 50px;
+    }
+    .become-host-part-wrapper{
+        display: flex;
+    }
+    .become-host-wrapper{
+        padding-right: 10px;
+        align-self: center;
+    }
+    .become-host-wrapper span:hover{
+        background-color: #dfdfdf;
+    }
+    .become-host-part .language-button-wrapper{
+        padding: 10px;
+        border-radius: 50px;
+    }
+    .become-host-part .language-button-wrapper:hover{
+        background-color: #dfdfdf;
+    }
+    .become-host-part .language-button-wrapper img{
+        height: 20px;
+        width: 20px;
+    }
+    .login-button-wrapper .login-button{
+        display: flex;
+        border: 1px solid #887f7f;
+        border-radius: 50px;    
+        padding: 5 10px;
+    }
+
+    .login-button-wrapper .login-button-menu-img, .login-button-wrapper .login-button-profile-img{
+        align-self: center;
+    }
+    .login-button-wrapper .login-button-menu-img{
+        padding-right: 10px;
+    }
+    .login-button-wrapper .login-button-menu-img img{
+        height: 20px;
+        width: 20px;
+    }
+    .login-button-wrapper .login-button-profile-img img{
+        width: 30px;
+        height: 30px;
+    }
 }
