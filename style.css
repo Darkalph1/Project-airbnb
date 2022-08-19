@@ -291,9 +291,9 @@ button.search-button, button.filter-icon-wrapper{
     opacity: 0;
 }
 
-.content-left-arrow-btn:hover, .content-right-arrow-btn:hover{
-    opacity: 1.9;
-}
+/* .content-left-arrow-btn:hover, .content-right-arrow-btn:hover{
+    opacity: 0;
+} */
 
 
 .margin-content{
