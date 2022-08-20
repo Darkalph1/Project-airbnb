@@ -212,7 +212,8 @@ button.search-button, button.filter-icon-wrapper{
 }
 .img-container-wrapper-1{
     position: relative;
-    overflow: scroll; 
+    overflow-x: scroll; 
+    overflow-y: hidden;
     border-radius: 20px; 
     height: 50%;
     aspect-ratio: 2/1.9;
@@ -304,18 +305,20 @@ button.search-button, button.filter-icon-wrapper{
 }
 
 .scroll-animation-rounds-wrapper{
-    position: absolute;
+    position: sticky;
     display: flex;
     flex-basis: 19%;
     justify-content: space-between;
-    top: 90%;
+    top: 0%;
     left: 43%;
     height: 2%;
     width: 20%;
+    transform: translateY(-20px);
     /* border: 1px solid black; */
 }
 
 .scroll-animation-rounds-wrapper .circle{
+  
     background-color: #fff;
     border-radius: 100px;
     height: 100%;
