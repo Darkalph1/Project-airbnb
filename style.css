@@ -136,17 +136,17 @@ button.search-button, button.filter-icon-wrapper{
 
 .search-bar-part-2 {
     padding-top: 5px 20px 0 20px;
-    height: fit-content;
+    /* height: fit-content; */
 }
 
 .search-bar-part-2 img{
-    height: 100%;
-    width: 24px;
+    height: 30px;
+    width: 30px;
 }
 .search-2-wrapper{
     padding: 10px 10px 0px 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
+    /* grid-auto-flow: column; */
+    /* grid-auto-columns: 100%; */
     gap: 16px;  
     overflow-x: scroll;
 }
