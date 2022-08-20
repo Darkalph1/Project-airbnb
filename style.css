@@ -145,8 +145,10 @@ button.search-button, button.filter-icon-wrapper{
 }
 .search-2-wrapper{
     padding: 10px 10px 0px 10px;
-    /* grid-auto-flow: column; */
-    /* grid-auto-columns: 100%; */
+
+    grid-auto-flow: column; 
+    grid-auto-columns: 100%;
+
     gap: 16px;  
     overflow-x: scroll;
 }
@@ -167,7 +169,7 @@ button.search-button, button.filter-icon-wrapper{
     flex-grow:1;
 }
 .top-bar-button-wrapper{
-    height: fit-content;
+    height: 60px;
 }
 
 .top-bar-button-wrapper:hover{
