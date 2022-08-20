@@ -216,6 +216,7 @@ button.search-button, button.filter-icon-wrapper{
     border-radius: 20px; 
     height: 50%;
     aspect-ratio: 2/1.9;
+    -webkit-aspect-ratio: 2/1.9;
 }
 
 .img-container-wrapper-1::-webkit-scrollbar{
