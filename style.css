@@ -144,8 +144,7 @@ button.search-button, button.filter-icon-wrapper{
     width: 30px;
 }
 .search-2-wrapper{
-    padding: 10px 10px 0px 10px;
-
+    padding: 10px 10px 0px 1px;
     grid-auto-flow: column; 
     grid-auto-columns: 100%;
 
@@ -475,6 +474,18 @@ section.footer-extention-745px{
    
     
     /* search bar */
+    .search-2-wrapper{
+        padding: 10px 10px 0px 30px;
+    }
+
+    .search-bar{
+        display:block;
+        padding: 0;
+        border-bottom: 1px solid #dfdfdf;
+        height: 120px;
+    }
+
+
     .search-bar{
         height: 180px;
     }
@@ -486,10 +497,12 @@ section.footer-extention-745px{
     .search-bar-part-1-745px{
         display: flex;
         width: 100%;
-        padding: 10px 20px 20px 20px;
+        padding: 10px 40px 20px 30px;
         /* height: 40px; */
         box-sizing: border-box;
         border-bottom: 1px solid #dfdfdf;
+        /* transform: scaleX(1.0); */
+        border-bottom-width: scaleX(1.2);    
         
 
     }
