@@ -521,6 +521,7 @@ section.footer-extention-745px{
         background-repeat: no-repeat;
         height: 150%;
         width: 20%;
+        
     }
    
    
@@ -749,11 +750,15 @@ section.footer-extention-745px{
         display: none;
         background-color: #eeeeee;
         overflow-x: hidden;
+        z-index: 30;
     }
 
     section.footer-extention-745px.open{
+        position: absolute;
+        top: 50%;
         display: block;
         border-radius: 20px ;
+
     }
     .footer-745px.close{
         display: none;
@@ -838,6 +843,7 @@ section.footer-extention-745px{
         background-repeat: no-repeat;
         height: 180%;
         width: 59%;
+        transform: translateX(-20px);
     }
     .filter-button-745px-wrapper{
         
