@@ -166,6 +166,8 @@ button.search-button, button.filter-icon-wrapper{
 }
 .top-bar-part-2-flex-wrap-1, .top-bar-part-2-flex-wrap-2{
     flex-grow:1;
+    flex-basis: 100%;
+    /* text-align: center; */
 }
 .top-bar-button-wrapper{
     height: 60px;
