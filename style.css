@@ -751,6 +751,7 @@ section.footer-extention-745px{
         background-color: #eeeeee;
         overflow-x: hidden;
         z-index: 30;
+        width: 100%;
     }
 
     section.footer-extention-745px.open{
